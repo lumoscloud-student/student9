@@ -4,6 +4,8 @@ learning how to code
 !
 !
 I have no idea what I'm doing
+me too, mal sehen was mich erwartet
+
 
 HAHAHAHA
 Testing.....
