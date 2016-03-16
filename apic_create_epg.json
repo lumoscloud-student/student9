@@ -1,0 +1,54 @@
+https://{{apic}}/api/node/mo/uni/tn-{{tenant}}/ap-{{anp-name}}/epg-{{epg-name}}.json
+{
+  "fvAEPg": {
+    "attributes": {
+      "dn": "uni/tn-{{tenant}}/ap-{{anp-name}}/epg-{{epg-name}}",
+      "name": "{{epg-name}}",
+      "rn": "epg-{{epg-name}}",
+      "status": "created"
+    },
+    "children": [
+      {
+        "fvCrtrn": {
+          "attributes": {
+            "dn": "uni/tn-{{tenant}}/ap-{{anp-name}}/epg-{{epg-name}}/crtrn",
+            "name": "default",
+            "rn": "crtrn",
+            "status": "created,modified"
+          },
+          "children": []
+        }
+      },
+      {
+        "fvRsBd": {
+          "attributes": {
+            "tnFvBDName": "{{bd-name}}",
+            "status": "created,modified"
+          },
+          "children": []
+        }
+      },
+      {
+        "fvRsDomAtt": {
+          "attributes": {
+            "tDn": "uni/phys-{{domain-name}}",
+            "status": "created"
+          },
+          "children": []
+        }
+      },
+      {
+        "fvRsPathAtt": {
+          "attributes": {
+            "tDn": "topology/pod-1/paths-{{sw-node-id}}/pathep-[{{port-id}}]",
+            "encap": "vlan-{{legacy-vlan-id}}",
+            "instrImedcy": "immediate",
+            "mode": "native",
+            "status": "created"
+          },
+          "children": []
+        }
+      }
+    ]
+  }
+}

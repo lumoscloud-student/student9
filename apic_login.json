@@ -1,0 +1,9 @@
+https://{{apic}}/api/aaaLogin.json
+{
+  "aaaUser": {
+    "attributes": {
+      "name": "{{username}}",
+      "pwd": "{{password}}"
+    }
+  }
+}

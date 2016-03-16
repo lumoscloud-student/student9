@@ -1,0 +1,43 @@
+timestamp: 12:23:01 DEBUG 
+method: GET
+url: https://10.101.2.101/api/node/class/aaaDomain.json?query-target-filter=and(ne(aaaDomain.name,"common"),ne(aaaDomain.name,"all"),ne(aaaDomain.name,"mgmt"))
+response: {"totalCount":"1","imdata":[{"aaaDomain":{"attributes":{"childAction":"","descr":"","dn":"uni/userext/domain-SECDOMAINTESTPOST","lcOwn":"local","modTs":"2016-02-03T18:55:51.304+00:00","name":"SECDOMAINTESTPOST","ownerKey":"","ownerTag":"","status":"","uid":"15374"}}}]}
+timestamp: 12:23:02 DEBUG 
+method: GET
+url: https://10.101.2.101/api/node/class/aaaDomain.json?query-target-filter=and(ne(aaaDomain.name,"common"),ne(aaaDomain.name,"all"),ne(aaaDomain.name,"mgmt"))&subscription=yes
+response: {"totalCount":"1","subscriptionId":"72057645594378445","imdata":[{"aaaDomain":{"attributes":{"childAction":"","descr":"","dn":"uni/userext/domain-SECDOMAINTESTPOST","lcOwn":"local","modTs":"2016-02-03T18:55:51.304+00:00","name":"SECDOMAINTESTPOST","ownerKey":"","ownerTag":"","status":"","uid":"15374"}}}]}
+timestamp: 12:23:16 DEBUG 
+method: POST
+url: https://10.101.2.101/api/node/mo/uni/tn-Tenant15.json
+payload{"fvTenant":{"attributes":{"dn":"uni/tn-Tenant15","name":"Tenant15","rn":"tn-Tenant15","status":"created"},"children":[]}}
+response: {"totalCount":"0","imdata":[]}
+timestamp: 12:23:48 DEBUG 
+method: POST
+url: https://10.101.2.101/api/node/mo/uni/tn-Tenant15/ctx-Main.json
+payload{"fvCtx":{"attributes":{"dn":"uni/tn-Tenant15/ctx-Main","name":"Main","rn":"ctx-Main","status":"created"},"children":[]}}
+response: {"totalCount":"0","imdata":[]}
+timestamp: 12:26:15 DEBUG 
+method: POST
+url: https://10.101.2.101/api/node/mo/uni/tn-Tenant15/BD-VLAN_101_10.15.1.1-24.json
+payload{"fvBD":{"attributes":{"dn":"uni/tn-Tenant15/BD-VLAN_101_10.15.1.1-24","mac":"00:22:BD:F8:19:FF","name":"VLAN_101_10.15.1.1-24","unkMacUcastAct":"flood","arpFlood":"true","rn":"BD-VLAN_101_10.15.1.1-24","status":"created"},"children":[{"fvSubnet":{"attributes":{"dn":"uni/tn-Tenant15/BD-VLAN_101_10.15.1.1-24/subnet-[10.15.1.1/24]","ip":"10.15.1.1/24","scope":"public","rn":"subnet-[10.15.1.1/24]","status":"created"},"children":[]}},{"fvRsCtx":{"attributes":{"tnFvCtxName":"Main","status":"created,modified"},"children":[]}}]}}
+response: {"totalCount":"0","imdata":[]}
+timestamp: 12:26:57 DEBUG 
+method: POST
+url: https://10.101.2.101/api/node/mo/uni/tn-Tenant15/ap-Legacy_VLAN_EPGs.json
+payload{"fvAp":{"attributes":{"dn":"uni/tn-Tenant15/ap-Legacy_VLAN_EPGs","name":"Legacy_VLAN_EPGs","rn":"ap-Legacy_VLAN_EPGs","status":"created"},"children":[]}}
+response: {"totalCount":"0","imdata":[]}
+timestamp: 12:29:02 DEBUG 
+method: POST
+url: https://10.101.2.101/api/node/mo/uni/tn-Tenant15/ap-Legacy_VLAN_EPGs/epg-VLAN_101_10.15.1.1-24.json
+payload{"fvAEPg":{"attributes":{"dn":"uni/tn-Tenant15/ap-Legacy_VLAN_EPGs/epg-VLAN_101_10.15.1.1-24","name":"VLAN_101_10.15.1.1-24","rn":"epg-VLAN_101_10.15.1.1-24","status":"created"},"children":[{"fvRsBd":{"attributes":{"tnFvBDName":"VLAN_101_10.15.1.1-24","status":"created,modified"},"children":[]}},{"fvRsDomAtt":{"attributes":{"tDn":"uni/phys-phys","status":"created"},"children":[]}},{"fvRsPathAtt":{"attributes":{"tDn":"topology/pod-1/paths-201/pathep-[eth1/1]","encap":"vlan-101","instrImedcy":"immediate","mode":"native","status":"created"},"children":[]}}]}}
+response: {"totalCount":"0","imdata":[]}
+timestamp: 12:30:27 DEBUG 
+method: POST
+url: https://10.101.2.101/api/node/mo/uni/tn-Tenant15/ap-Legacy_VLAN_EPGs/epg-VLAN_101_10.15.1.1-24.json
+payload{"fvRsProv":{"attributes":{"tnVzBrCPName":"default","status":"created,modified"},"children":[]}}
+response: {"totalCount":"0","imdata":[]}
+timestamp: 12:30:46 DEBUG 
+method: POST
+url: https://10.101.2.101/api/node/mo/uni/tn-Tenant15/ap-Legacy_VLAN_EPGs/epg-VLAN_101_10.15.1.1-24.json
+payload{"fvRsCons":{"attributes":{"tnVzBrCPName":"default","status":"created,modified"},"children":[]}}
+response: {"totalCount":"0","imdata":[]}
